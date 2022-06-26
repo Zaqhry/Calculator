@@ -1,0 +1,141 @@
+
+
+
+
+# CALCULATOR
+
+import math 
+
+# Addition 
+
+def Addition(x,y):
+    sum = x + y
+    return sum
+
+# Subtraction 
+
+def Subtraction(x,y): 
+    return x - y 
+
+# Multiplication 
+
+def Multiplication(x,y): 
+    return x * y 
+
+# Division 
+
+def Division(x,y):
+    if x != 0: 
+        return x / y
+    return 'Try Again'
+
+# Raised to a power 
+
+def Power(x,y): 
+    return x ** y
+
+# Square Root Addition
+
+def SquareRootAddition(x,y): 
+    return math.sqrt(x + y)
+
+# Square Root Subtraction
+
+def SquareRootSubtraction(x,y): 
+    if x > y: 
+        return math.sqrt(x - y)
+    return 'Try Again'
+
+# Square Root Multiplication
+
+def SquareRootMultiplication(x,y): 
+    return math.sqrt(x * y)
+
+# Square Root Division
+
+def SquareRootDivision(x,y): 
+    if x != 0:
+        return math.sqrt(x / y)
+    return 'Error'
+
+print("Select operation.")
+print("1.Addition")
+print("2.Subtraction")
+print("3.Multiplication")
+print("4.Division")
+print("5.AdditionPower")
+print("6.SubtractionPower")
+print("7.MultiplicationPower")
+print("8.DivisionPower")
+print("9.SquareRootAddition")
+print("10.SquareRootSubtraction")
+print("11.SquareRootMultiplication")
+print("12.SquareRootDivision")
+
+
+#-------------------------------------------------------------------------------
+
+while True: 
+    
+    choice = input('Select operation 1,2,3,4,5,6,7,8,9,10,11,12: ')
+    
+    if choice in ('1','2','3','4','5','6','7','8','9','10','11','12'):
+        num_1 = int(input('Enter a number: '))
+        num_2 = int(input('Enter a number: '))
+        
+        if choice == '1': 
+            print('Addition')
+            print(num_1,'+',num_2,'=',round(Addition(num_1,num_2),3))
+        
+        elif choice == '2': 
+            print('Subtraction')
+            print(num_1,'-',num_2,'=',round(Subtraction(num_1,num_2),3))
+            
+        elif choice == '3': 
+            print('Multiplication')
+            print(num_1,'*',num_2,'=',round(Multiplication(num_1,num_2),3))
+            
+        elif choice == '4': 
+            print('Division')
+            print(num_1,'/',num_2,'=',round(Division(num_1,num_2),3))
+            
+        elif choice == '5': 
+            print('AdditionPower')
+            print('(',num_1,'+',num_2,')','²','=',round(Power(num_1,num_2),3))
+            
+        elif choice == '6': 
+            print('SubtractionPower')
+            print('(',num_1,'-',num_2,')','²','=',round(Power(num_1,num_2),3))
+            
+        elif choice == '7': 
+            print('MultiplicationPower')
+            print('(',num_1,'*',num_2,')','²','=',round(Power(num_1,num_2),3))
+            
+        elif choice == '8': 
+            print('DivisionPower')
+            print('(',num_1,'/',num_2,')','²','=',round(Power(num_1,num_2),3))
+            
+        elif choice == '9': 
+            print('SqaureRootAddition')
+            print('√',num_1,'+',num_2,'=',round(SquareRootAddition(num_1,num_2),3))
+            
+        elif choice == '10': 
+            print('SquareRootSubtraction')
+            print('√',num_1,'-',num_2,'=',SquareRootSubtraction(num_1,num_2))
+            
+        elif choice == '11': 
+            print('SquareRootMultiplication')
+            print('√',num_1,'*',num_2,'=',round(SquareRootMultiplication(num_1,num_2),3))
+            
+        elif choice == '12': 
+            print('SquareRootDivision')
+            print('√',num_1,'/',num_2,'=',round(SquareRootDivision(num_1,num_2),3))
+            
+        continue_calculation = input('Continue calculation? Yes / No: ') 
+        
+        if continue_calculation == 'No' or continue_calculation == 'no': 
+            break
+        else: 
+            input('Enter a valid reponse: ')
+        
+#-------------------------------------------------------------------------------
